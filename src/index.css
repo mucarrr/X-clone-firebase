@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #000000;
+  --color-secondary: #E7E9EA;
+  --color-tw-blue:#1D9BF0;
+  --color-tw-gray:#2F3336;
+}
+
+@layer components{
+  .input{
+    @apply bg-secondary text-black rounded mt-1 p-2 outline-none shadow-lg focus:shadow-[gray] w-full
+  }
+  .form-icon{
+    @apply hover:bg-tw-blue/20 rounded-full size-8 grid place-items-center cursor-pointer transition
+  }
+}
