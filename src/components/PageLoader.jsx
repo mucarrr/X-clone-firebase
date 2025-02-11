@@ -1,6 +1,7 @@
-const PageLoader = () => {
+const PageLoader = ({designs}) => {
     return (
-      <div className="h-screen bg-primary grid place-items-center">
+   
+        <div className={`h-screen bg-primary ${designs}`}>
         <div role="status">
           <svg
             aria-hidden="true"
@@ -21,6 +22,7 @@ const PageLoader = () => {
           <span className="sr-only">Loading...</span>
         </div>
       </div>
+
     );
   };
   

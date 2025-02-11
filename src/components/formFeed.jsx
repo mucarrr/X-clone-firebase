@@ -7,6 +7,9 @@ import { toast } from "react-toastify";
 import uploadToStorage from "../firebase/uploadToStorage";
 import { addDoc, collection, serverTimestamp } from "firebase/firestore";
 import { db } from "../firebase";
+import Loader from "./Loader";
+import TextArea from "./TextArea";
+import UserAvatar from "./UserAvatar";
 
 const FormFeed = ({ user }) => {
   const [isLoading, setIsLoading] = useState(false)
@@ -57,17 +60,9 @@ const FormFeed = ({ user }) => {
   };
   return (
     <div className="border-b border-tw-gray p-4 gap-3">
-      <img
-        src={user.photoURL}
-        alt={user.displayName}
-        className="size-[35px] md:size-[45px] rounded-full"
-      />
+      <UserAvatar photo={user.photoURL} name={user.displayName}  />
       <form className="w-full pt-1" onSubmit={handleSubmit}>
-        <textarea
-          name="text"
-          className="w-full bg-transparent mb-2 md:text-lg text-zinc-300 outline-none resize-y min-h-[40px] max-h-[300px]"
-          placeholder="What's happening?"
-        ></textarea>
+        <TextArea/>
         <ImagePreview
           image={image}
           setImage={setImage}
@@ -99,7 +94,7 @@ const FormFeed = ({ user }) => {
             className="mt-10 bg-secondary text-primary tracking-wide rounded-full px-5 py-[6px] font-bold transition hover:bg-zinc-300 hover:brightness-70 min-w-[100px] cursor-pointer"
             disabled={isLoading}
           >
-            {isLoading ? "Loading..." : "Send"}
+            {isLoading ? <Loader/> : "Send"}
           </button>
         </div>
       </form>
