@@ -8,7 +8,9 @@
   --color-tw-gray:#2F3336;
 }
 
+
 @layer components{
+  
   .input{
     @apply bg-secondary text-black rounded mt-1 p-2 outline-none shadow-lg focus:shadow-[gray] w-full
   }
@@ -19,6 +21,25 @@
     @apply p-3 rounded-full cursor-pointer transition
   }
 }
+
+@layer utilities {
+  .scroll-thin {
+    @apply overflow-y-scroll; /* Dikey kaydırma */
+  }
+
+  .scroll-thin::-webkit-scrollbar {
+    width: 4px; /* Scroll bar genişliği */
+  }
+
+  .scroll-thin::-webkit-scrollbar-thumb {
+    @apply bg-black rounded-md; /* Scroll bar tutamacı siyah ve yuvarlatılmış */
+  }
+
+  .scroll-thin::-webkit-scrollbar-track {
+    @apply bg-transparent; /* Scroll bar arka planı */
+  }
+}
+
 
 /* From Uiverse.io by Galahhad */ 
 /* The design is inspired from the mockapi.io */

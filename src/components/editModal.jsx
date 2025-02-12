@@ -13,6 +13,7 @@ const editModal = ({ isOpen, close, tweet }) => {
     e.preventDefault();
     const text = e.target[0].value.trim();
     const file = e.target[1].files && e.target[1].files[0];
+    
 
     if (!text && !file && !tweet.content.image) {
         return toast.info("Please choose a content");
