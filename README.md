@@ -11,5 +11,5 @@ Posts and interactions are updated in real time, enhancing engagement and respon
 # 📌 Conclusion:
 This project serves as a great example of how to optimize performance, security, and user experience in modern web applications. 🚀
 # Preview of the project
-![](Screenshot 2025-02-18 215122.png)
+![](Screenshot.png)
 ![](1739908683194.jfif)
